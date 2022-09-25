@@ -31,6 +31,10 @@ const Sprint = () => {
     setModal(!modal);
   };
 
+  useEffect(() => {
+    console.log(backlog);
+  }, [backlog]);
+
   return (
     <Container>
       <div style={{ marginTop: "2rem" }}>

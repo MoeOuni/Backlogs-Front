@@ -63,11 +63,14 @@ const Backlog = () => {
     console.log("update");
   };
 
-  const updateTaskBacklogToggle = (object) => {
+  const updateTaskBacklogToggle = () => {
+    setUpdateTaskBacklogModal(!updateTaskBacklogModal);
+  };
+
+  const updateTask = (object) => {
     setUpdateTaskBacklogModal(!updateTaskBacklogModal);
     setSingleTask(object);
   };
-
   //   const onDragStart = (e: React.DragEvent<HTMLDivElement>, index: Number) => {
   //     console.log("drag started", index);
   //   };
@@ -182,7 +185,7 @@ const Backlog = () => {
                         alignItems: "center",
                         cursor: "pointer",
                       }}
-                      onClick={() => updateTaskBacklogToggle(l)}
+                      onClick={() => updateTask(l)}
                     >
                       <FontAwesomeIcon icon={faPenSquare} />
                     </Col>

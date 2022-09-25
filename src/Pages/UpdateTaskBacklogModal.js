@@ -32,7 +32,7 @@ const UpdateTaskBacklogModal = (props) => {
       );
 
       setList((list) => {
-        return list.filter((l) => (l._id === singleTask._id ? singleTask : l));
+        return list.map((l) => (l._id === singleTask._id ? singleTask : l));
       });
 
       updateTaskBacklogToggle();
